@@ -1,0 +1,59 @@
+main > .container {
+  padding: 0;
+}
+
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+@media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+    }
+}
+
+#hosts {
+    font-size: 26px;
+    color: #e9ecef;
+    margin-left:30px;
+    margin-right:30px;
+    margin-top:8px;
+    margin-bottom:12px;
+}
+
+.i-host{
+    top:4px;
+}
+
+.i-host-up{
+    color: green;
+}
+
+.i-host-down{
+    color: red;
+}
+
+.table {
+    margin-bottom: 0;
+}
+
+#messages tr {
+    line-height: 15px;
+    min-height: 15px;
+    height: 15px;
+}
+
+.settings {
+    position:absolute;
+    top:0;
+    right:0;
+    padding:5px;
+}
+
+.i-settings {
+    color: #e9ecef;;
+}

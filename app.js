@@ -159,6 +159,6 @@ app.get('/', function(req, res){
     });
 
 http.listen(80, function(){
-   console.log('App listening on port 3000');
+   console.log('App listening on port 80');
 });
 

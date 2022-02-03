@@ -8,6 +8,13 @@ $ sudo apt install nodejs
 
 
 
+Set up Ubuntu with essentials:
+
+(if no python install that too ???)
+$ sudo apt-get install -y build-essential
+
+
+
 Set additional capabilities to Node.js:
 
 $ sudo setcap cap_net_admin,cap_net_raw,cap_net_bind_service=+eip /usr/bin/node

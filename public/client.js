@@ -9,6 +9,7 @@ var firstConnect = true;
 
 var configModalEl = document.getElementById('configModal');
 var configButtonEl = document.getElementById('saveConfig');
+var resetSpeedButtonEl = document.getElementById('newSpeedTest');
 var configExButtonEl = document.getElementById('exampleConfig');
 var connectionModal = new bootstrap.Modal(document.getElementById('connectionModal'));
 var configModal = new bootstrap.Modal(document.getElementById('configModal'));
@@ -112,6 +113,16 @@ configButtonEl.addEventListener('click', function (event) {
         alertPlaceholder.append(wrapper);
     }
 });
+
+resetSpeedButtonEl.addEventListener('click', function (event) {
+    var speedTestFrame = document.getElementById('speedTestFrame');
+    
+speedTestFrame.innerHTML = '<div style="min-height:360px;"><div style="width:100%;height:0;padding-bottom:50%;position:relative;"><iframe style="border:none;position:absolute;top:0;left:0;width:100%;height:100%;min-height:360px;border:none;overflow:hidden !important;" src="//openspeedtest.com/Get-widget.php"></iframe></div></div>';
+
+        
+    
+});
+
 
 
 socket.on('connect', function() {

@@ -43,13 +43,41 @@
         </div>
       </div>
     </div>
+    
+    <!-- Speedtest Modal -->
+    <div class="modal fade" id="speedModal" tabindex="-1" aria-labelledby="speedModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="speedModalLabel">Run speedtest</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div id="speedAlertPlaceholder"></div>
+           
+           <!--OST Widget code start-->
+           <div id="speedTestFrame" style="text-align:right;"><div style="min-height:360px;"><div style="width:100%;height:0;padding-bottom:50%;position:relative;"><iframe style="border:none;position:absolute;top:0;left:0;width:100%;height:100%;min-height:360px;border:none;overflow:hidden !important;" src="//openspeedtest.com/Get-widget.php"></iframe></div></div>Provided by  <a href="http://openspeedtest.com">OpenSpeedtest.com</a></div>
+           <!-- OST Widget code end -->
+           
+          </div>
+          <div class="modal-footer d-flex justify-content-between">
+            <div>
+            
+                <button id="newSpeedTest" type="button" class="btn btn-primary">Reset speed test</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     
     <!-- Ping Monitor -->
     <nav class="navbar navbar-inverse navbar-fixed-top bg-dark">
       <div class="container-fluid">
         <div class="settings" style="">
-            <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#configModal"><i class="oi oi-cog i-settings"></i></button>
+            <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#configModal"><i class="oi oi-cog i-settings"></i></button><br>
+            <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#speedModal"><i class="oi oi-wifi i-settings"></i></button>
         </div>
             
         <div id="hosts" class="row hosts">

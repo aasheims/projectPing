@@ -17,9 +17,6 @@ var alertPlaceholder = document.getElementById('configAlertPlaceholder');
 
 
 
-
-
-
 function validateJson(json) {
     try {
         JSON.parse(json);
@@ -35,6 +32,7 @@ function setStateUp(index, time) {
     div.children[0].className = 'oi oi-circle-check i-host i-host-up';
     div.children[2].textContent = ' ('+time+')';
 }
+
 
 function setStateDown(index, time) {
     var div = document.getElementById('host_'+index);
@@ -114,15 +112,11 @@ configButtonEl.addEventListener('click', function (event) {
     }
 });
 
+
 resetSpeedButtonEl.addEventListener('click', function (event) {
     var speedTestFrame = document.getElementById('speedTestFrame');
-    
-speedTestFrame.innerHTML = '<div style="min-height:360px;"><div style="width:100%;height:0;padding-bottom:50%;position:relative;"><iframe style="border:none;position:absolute;top:0;left:0;width:100%;height:100%;min-height:360px;border:none;overflow:hidden !important;" src="//openspeedtest.com/Get-widget.php"></iframe></div></div>';
-
-        
-    
+    speedTestFrame.innerHTML = '<div style="min-height:360px;"><div style="width:100%;height:0;padding-bottom:50%;position:relative;"><iframe style="border:none;position:absolute;top:0;left:0;width:100%;height:100%;min-height:360px;border:none;overflow:hidden !important;" src="//openspeedtest.com/Get-widget.php"></iframe></div></div>';
 });
-
 
 
 socket.on('connect', function() {
@@ -130,7 +124,6 @@ socket.on('connect', function() {
     if (firstConnect) {
         firstConnect = false;
     } else {
-        //socket.emit('serverReconnect');
         window.location.reload();
     }
 });
@@ -159,4 +152,3 @@ socket.on('ping', function(index, upState, time) {
         setStateDown(index, time);
     }
 });
-

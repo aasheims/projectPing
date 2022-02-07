@@ -43,6 +43,7 @@ function padTo2Digits(num) {
   return num.toString().padStart(2, '0');
 }
 
+
 function loadLogs() {
     const date = new Date();
     
@@ -74,7 +75,6 @@ function loadLogs() {
 }
 
 
-
 function getTimestamp() {
     const date = new Date();
     return (
@@ -91,6 +91,7 @@ function getTimestamp() {
         ].join(':')
     );
 }
+
 
 function stateChange(state, index, target, info) {
     if( upStates[index] !== undefined) {
@@ -120,10 +121,6 @@ io.on('connection', (socket) => {
             }
           });
     });
-
-    //socket.on('serverReconnect', () => {
-    //    socket.emit('message', getTimestamp() + ' WARN  ' +'Server restarted');
-    //});
 });
 
 
@@ -158,6 +155,7 @@ app.get('/', function(req, res){
           });
     });
 
+    
 http.listen(80, function(){
    console.log('App listening on port 80');
 });

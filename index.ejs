@@ -36,8 +36,8 @@
           <div class="modal-footer d-flex justify-content-between">
             <button id="exampleConfig" type="button" class="btn btn-link">Load example config</button>
             <div>
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button id="saveConfig" type="button" class="btn btn-primary">Save changes</button>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button id="saveConfig" type="button" class="btn btn-primary">Save changes</button>
             </div>
           </div>
         </div>
@@ -54,17 +54,14 @@
           </div>
           <div class="modal-body">
             <div id="speedAlertPlaceholder"></div>
-           
-           <!--OST Widget code start-->
-           <div id="speedTestFrame" style="text-align:right;"><div style="min-height:360px;"><div style="width:100%;height:0;padding-bottom:50%;position:relative;"><iframe style="border:none;position:absolute;top:0;left:0;width:100%;height:100%;min-height:360px;border:none;overflow:hidden !important;" src="//openspeedtest.com/Get-widget.php"></iframe></div></div>Provided by  <a href="http://openspeedtest.com">OpenSpeedtest.com</a></div>
-           <!-- OST Widget code end -->
-           
+            <!--OST Widget code start-->
+            <div id="speedTestFrame" style="text-align:right;"><div style="min-height:360px;"><div style="width:100%;height:0;padding-bottom:50%;position:relative;"><iframe style="border:none;position:absolute;top:0;left:0;width:100%;height:100%;min-height:360px;border:none;overflow:hidden !important;" src="//openspeedtest.com/Get-widget.php"></iframe></div></div>Provided by  <a href="http://openspeedtest.com">OpenSpeedtest.com</a></div>
+            <!-- OST Widget code end -->
           </div>
           <div class="modal-footer d-flex justify-content-between">
             <div>
-            
-                <button id="newSpeedTest" type="button" class="btn btn-primary">Reset speed test</button>
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button id="newSpeedTest" type="button" class="btn btn-primary">Reset speed test</button>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
             </div>
           </div>
         </div>
@@ -75,17 +72,17 @@
     <!-- Ping Monitor -->
     <nav class="navbar navbar-inverse navbar-fixed-top bg-dark">
       <div class="container-fluid">
-        <div class="settings" style="">
-            <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#configModal"><i class="oi oi-cog i-settings"></i></button><br>
-            <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#speedModal"><i class="oi oi-wifi i-settings"></i></button>
+        <div class="settings">
+          <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#configModal"><i class="oi oi-cog i-settings"></i></button><br>
+          <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#speedModal"><i class="oi oi-wifi i-settings"></i></button>
         </div>
             
         <div id="hosts" class="row hosts">
-            <% config.hosts.forEach(function(host, index) { %>
-            <div id="host_<%= index %>" class="col-12 col-md-6 col-lg-4 col-xl-3" name="hosts">
-                <i class="oi oi-loop-circular i-host"></i><span> <%= host.targetName %></span><span></span>
-            </div>
-            <% }); %>
+          <% config.hosts.forEach(function(host, index) { %>
+          <div id="host_<%= index %>" class="col-12 col-md-6 col-lg-4 col-xl-3" name="hosts">
+            <i class="oi oi-loop-circular i-host"></i><span> <%= host.targetName %></span><span></span>
+          </div>
+          <% }); %>
         </div>
       </div>
     </nav>
@@ -97,9 +94,9 @@
             <% config.graphs.forEach(function(graph) { %>
             <div class="col-12 col-lg-6 col-xl-3 mt-2" style="text-align:center">
             <%= graph.graphName %>
-                <a target="_blank" title="Click to see history in LibreNMS" class="link" style="overflow: hidden; display:block;" href="<%= config.libreNMSURL %>/device/device=<%= config.sonicwallDeviceID %>/tab=port/port=<%= graph.graphID %>/" target="_blank">
-                    <object type="text/html" data="<%= config.libreNMSURL %>/graph-realtime.php?username=<%= config.libreNMSUsername %>&amp;password=<%= config.libreNMSPassword %>&amp;type=bits&amp;id=<%= graph.graphID %>&amp;interval=2/" style="pointer-events: none; overflow:auto;"></object>
-                </a>
+              <a target="_blank" title="Click to see history in LibreNMS" class="link" style="overflow: hidden; display:block;" href="<%= config.libreNMSURL %>/device/device=<%= config.sonicwallDeviceID %>/tab=port/port=<%= graph.graphID %>/" target="_blank">
+                <object type="text/html" data="<%= config.libreNMSURL %>/graph-realtime.php?username=<%= config.libreNMSUsername %>&amp;password=<%= config.libreNMSPassword %>&amp;type=bits&amp;id=<%= graph.graphID %>&amp;interval=2/" style="pointer-events: none; overflow:auto;"></object>
+              </a>
             </div>
             <% }); %>
          </div>
@@ -110,17 +107,17 @@
     <!-- Event Messages -->
     <footer class="footer mt-auto fixed-bottom bg-light">
       <div class="container-fluid p-0 border-top border-dark">
-	    <div class="overflow-auto bg-light" style="height: 120px;">
-		    <table class="table table-sm table-striped">
-			    <tbody id="messages">
-			        <% logs.forEach(function(log) { %>
-			        <tr>
-			            <td><%= log %></td>
-		            </tr>
-			        <% }); %>
-			    </tbody>
-		    </table>
-	    </div>
+        <div class="overflow-auto bg-light" style="height: 120px;">
+          <table class="table table-sm table-striped">
+            <tbody id="messages">
+              <% logs.forEach(function(log) { %>
+              <tr>
+                <td><%= log %></td>
+              </tr>
+              <% }); %>
+            </tbody>
+          </table>
+        </div>
       </div>
     </footer>
     <script src="/bootstrap-5.1.3-dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

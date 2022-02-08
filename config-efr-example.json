@@ -1,76 +1,77 @@
 {
     "hosts": [
         {
-            "targetName": "VSAT vlan300",
+            "targetName": "Wan 1",
             "targetAddress": "192.36.143.130"
         },
         {
-            "targetName": "4G Tampnet 301",
+            "targetName": "Wan 2",
             "targetAddress": "193.150.22.36"
         },
         {
-            "targetName": "4G TelenorOnshore 302",
+            "targetName": "Wan 3",
             "targetAddress": "62.101.228.30"
         },
         {
-            "targetName": "4GTelenorOffshore 303",
+            "targetName": "Wan 4",
             "targetAddress": "185.41.243.43"
         },
         {
-            "targetName": "GSM 4G 304",
+            "targetName": "Local Site 1",
             "targetAddress": "80.89.32.121"
         },
         {
-            "targetName": "Marlink WiFi 306",
+            "targetName": "Local Site 2",
             "targetAddress": "81.166.75.50"
         },
         {
-            "targetName": "WIFI killingøy 307",
+            "targetName": "Local Site 3",
             "targetAddress": "162.159.200.1"
         },
         {
-            "targetName": "Offline",
+            "targetName": "Google",
             "targetAddress": "8.8.8.8"
         }
     ],
     "pingInterval": 5000,
-    "libreNMSURL": "http://10.200.202.26",
+    "libreNMSURL": "http://xxx.xxx.xxx.xxx",
     "libreNMSUsername": "librenms",
     "libreNMSPassword": "D32fwefwef",
     "sonicwallDeviceID": "2",
+    "graphInterval": "6",
     "graphs": [
         {
-            "graphName": "VSAT X1 ",
+            "graphName": "Wan 1",
             "graphID": "4"
         },{
-            "graphName": "4G Tampnet X6:301",
+            "graphName": "Wan 2",
             "graphID": "14"
         },{
-            "graphName": "Telenor Onshore 4G X6:302",
+            "graphName": "Wan 3",
             "graphID": "15"
         },{
-            "graphName": "Telenor Offshore 4G X6:303",
+            "graphName": "Wan 4",
             "graphID": "16"
         },{
-            "graphName": "GSM 4G X6:304",
+            "graphName": "Wan 5",
             "graphID": "17"
         },{
-            "graphName": "Killingøy WIFI X6:307",
+            "graphName": "Wan 6",
             "graphID": "20"
         },{
-            "graphName": "Welfare WIFI",
+            "graphName": "LAN WIFI",
             "graphID": "13"
         },{
-            "graphName": "Offline LAN",
+            "graphName": "LAN 2",
             "graphID": "3"
         },{
-            "graphName": "Client LAN",
+            "graphName": "LAN 3",
             "graphID": "5"
         },{
-            "graphName": "3Party LAN",
+            "graphName": "LAN 4",
             "graphID": "6"
         },{
-            "graphName": "DO Laptop",
+            "graphName": "Lan 5",
             "graphID": "12"
         }
     ]

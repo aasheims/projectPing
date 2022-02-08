@@ -38,6 +38,7 @@
   "libreNMSUsername": "librenms",
   "libreNMSPassword": "D32fwefwef",
   "sonicwallDeviceID": "2",
+  "graphInterval": "6",
   "graphs": [
     {
       "graphName": "VSAT X1 ",

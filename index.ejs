@@ -95,7 +95,7 @@
             <div class="col-12 col-lg-6 col-xl-3 mt-2" style="text-align:center">
             <%= graph.graphName %>
               <a target="_blank" title="Click to see history in LibreNMS" class="link" style="overflow: hidden; display:block;" href="<%= config.libreNMSURL %>/device/device=<%= config.sonicwallDeviceID %>/tab=port/port=<%= graph.graphID %>/" target="_blank">
-                <object type="text/html" data="<%= config.libreNMSURL %>/graph-realtime.php?username=<%= config.libreNMSUsername %>&amp;password=<%= config.libreNMSPassword %>&amp;type=bits&amp;id=<%= graph.graphID %>&amp;interval=2/" style="pointer-events: none; overflow:auto;"></object>
+                <object type="text/html" data="<%= config.libreNMSURL %>/graph-realtime.php?username=<%= config.libreNMSUsername %>&amp;password=<%= config.libreNMSPassword %>&amp;type=bits&amp;id=<%= graph.graphID %>&amp;interval=<%- config.graphInterval ? config.graphInterval : '5' %>/" style="pointer-events: none; overflow:auto;"></object>
               </a>
             </div>
             <% }); %>
